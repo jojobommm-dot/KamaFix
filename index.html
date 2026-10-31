@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KamaFix — ремонт телефонов</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Ремонт телефонов по честной цене: средняя рыночная цена запчасти плюс фиксированная работа мастера.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="KamaFix, на главную"><span class="logo__mark">K</span>KamaFix</a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="calculator.html">Калькулятор</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+79000000000">+7 (900) 000-00-00</a>
+      <a class="btn btn--primary btn--sm" href="contacts.html#order">Записаться</a>
+    </div>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<main data-page="home">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <span class="badge">Цены обновляются каждый день</span>
+        <h1>Ремонт телефона по честной цене — узнайте стоимость за 30 секунд</h1>
+        <p class="lead">Мы находим среднюю рыночную цену запчасти и прибавляем фиксированную стоимость работы мастера. Никаких скрытых наценок.</p>
+        <div class="hero__buttons">
+          <a class="btn btn--primary" href="calculator.html">Рассчитать стоимость</a>
+          <a class="btn btn--secondary" href="services.html">Наши услуги</a>
+        </div>
+        <div class="stats">
+          <div><strong>5 000+</strong><span>устройств отремонтировано</span></div>
+          <div><strong>от 30 мин</strong><span>срочный ремонт</span></div>
+          <div><strong>90 дней</strong><span>гарантия</span></div>
+        </div>
+      </div>
+      <form class="calc-card" aria-labelledby="quick-title" onsubmit="return false">
+        <h2 id="quick-title">Быстрый расчёт</h2>
+        <div class="field"><label for="quick-model">Модель</label><select class="select" id="quick-model"><option>iPhone 13</option></select></div>
+        <div class="field"><label for="quick-repair">Неисправность</label><select class="select" id="quick-repair"><option>Замена экрана</option></select></div>
+        <hr>
+        <div class="line"><span>Запчасть (средняя цена)</span><strong class="num" id="quick-part">—</strong></div>
+        <div class="line"><span>Работа мастера</span><strong class="num" id="quick-labor">—</strong></div>
+        <div class="total"><span>Итого</span><strong class="num" id="quick-total">—</strong></div>
+        <a class="btn btn--primary btn--block" href="contacts.html#order">Записаться на ремонт</a>
+        <div data-load-error></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="heading">
+        <span class="eyebrow">Прозрачная цена</span>
+        <h2>Как мы считаем стоимость ремонта</h2>
+        <p class="lead">Парсер ежедневно собирает цены на запчасти у поставщиков и считает среднюю. К ней добавляется фиксированная стоимость работы.</p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step"><span class="step__n">1</span><h3>Собираем цены</h3><p>Проверяем предложения у поставщиков запчастей для вашей модели</p></li>
+        <li class="step"><span class="step__n">2</span><h3>Считаем среднюю</h3><p>Отбрасываем аномально дешёвые и дорогие, берём среднюю цену</p></li>
+        <li class="step"><span class="step__n">3</span><h3>Добавляем работу</h3><p>Прибавляем фиксированную стоимость работы мастера по прайсу</p></li>
+        <li class="step"><span class="step__n">4</span><h3>Вы видите итог</h3><p>Цена без сюрпризов — фиксируем её при записи на ремонт</p></li>
+      </ol>
+      <div class="formula" aria-label="Средняя цена запчасти плюс работа мастера равно итоговая стоимость">
+        <span>Средняя цена запчасти</span><span class="op">+</span><span>Работа мастера</span><span class="op">=</span><span class="res">Итоговая стоимость</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="heading"><span class="eyebrow">Услуги</span><h2>Популярные услуги</h2></div>
+      <div class="services-grid">
+      <a class="service-card" href="calculator.html#screen">
+        <span class="service-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <h3>Замена экрана</h3>
+        <p>Оригинальные и совместимые дисплеи, установка за 1 час</p>
+        <span class="price num" data-from="screen">&nbsp;</span>
+      </a>
+      <a class="service-card" href="calculator.html#battery">
+        <span class="service-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <h3>Замена аккумулятора</h3>
+        <p>Новая батарея с гарантией, восстановим автономность</p>
+        <span class="price num" data-from="battery">&nbsp;</span>
+      </a>
+      <a class="service-card" href="calculator.html#charging">
+        <span class="service-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <h3>Ремонт разъёма зарядки</h3>
+        <p>Чистка или замена разъёма Lightning / USB-C</p>
+        <span class="price num" data-from="charging">&nbsp;</span>
+      </a>
+      <a class="service-card" href="calculator.html#camera">
+        <span class="service-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <h3>Замена камеры</h3>
+        <p>Основная и фронтальная камера, стекло камеры</p>
+        <span class="price num" data-from="camera">&nbsp;</span>
+      </a>
+      <a class="service-card" href="calculator.html#water">
+        <span class="service-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <h3>После попадания воды</h3>
+        <p>Чистка платы и диагностика после залития</p>
+        <span class="price num" data-from="water">&nbsp;</span>
+      </a>
+      <a class="service-card" href="calculator.html#diagnostics">
+        <span class="service-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <h3>Диагностика</h3>
+        <p>Бесплатно при ремонте в нашем сервисе</p>
+        <span class="price num" data-from="diagnostics">&nbsp;</span>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="perks" id="perks">
+    <div class="container perks__grid">
+      <div><h3>✓ Гарантия 90 дней</h3><p>На все работы и установленные запчасти</p></div>
+      <div><h3>✓ Цена фиксируется</h3><p>Стоимость из калькулятора не меняется при записи</p></div>
+      <div><h3>✓ Ремонт при вас</h3><p>Большинство работ — за 30–60 минут</p></div>
+      <div><h3>✓ Бесплатная диагностика</h3><p>Если ремонтируете у нас</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <div><h2>Не знаете, что сломалось?</h2><p>Оставьте заявку — мастер перезвонит за 10 минут и подскажет цену.</p></div>
+        <a class="btn btn--secondary" href="contacts.html#order">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__about">
+      <a class="logo" href="index.html">KamaFix</a>
+      <p>Ремонт смартфонов и планшетов. Честная цена: средняя стоимость запчасти + работа мастера.</p>
+    </div>
+    <div>
+      <h4>Сервис</h4>
+      <ul><li><a href="services.html">Услуги и цены</a></li><li><a href="calculator.html">Калькулятор</a></li><li><a href="index.html#perks">Гарантия</a></li></ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul><li><a href="tel:+79000000000">+7 (900) 000-00-00</a></li><li><a href="mailto:info@kamafix.ru">info@kamafix.ru</a></li><li>ул. Примерная, 1</li></ul>
+    </div>
+    <div>
+      <h4>Часы работы</h4>
+      <ul><li>Пн–Пт: 10:00–20:00</li><li>Сб–Вс: 11:00–18:00</li></ul>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/pricing.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
