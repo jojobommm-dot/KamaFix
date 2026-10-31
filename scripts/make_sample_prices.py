@@ -27,14 +27,29 @@ QUALITIES = {
 
 # brand, name, base screen price (original), oled?, tier labor
 MODELS = [
+    ("Apple", "iPhone 17 Pro Max", 31000, True, 2500),
+    ("Apple", "iPhone 17 Pro", 27500, True, 2500),
+    ("Apple", "iPhone Air", 25000, True, 2500),
+    ("Apple", "iPhone 17", 19500, True, 2200),
+    ("Apple", "iPhone 16 Pro Max", 26500, True, 2500),
+    ("Apple", "iPhone 16 Pro", 23000, True, 2500),
+    ("Apple", "iPhone 16", 16500, True, 2200),
+    ("Apple", "iPhone 16e", 12500, True, 2000),
     ("Apple", "iPhone 15", 14500, True, 2000),
     ("Apple", "iPhone 14", 9800, True, 1800),
     ("Apple", "iPhone 13", 6450, True, 1500),
     ("Apple", "iPhone 12", 5600, True, 1500),
     ("Apple", "iPhone 11", 3900, False, 1300),
     ("Apple", "iPhone XR", 2900, False, 1200),
+    ("Samsung", "Samsung Galaxy S26 Ultra", 28000, True, 2500),
+    ("Samsung", "Samsung Galaxy S26", 17500, True, 2200),
+    ("Samsung", "Samsung Galaxy S25 Ultra", 25000, True, 2500),
+    ("Samsung", "Samsung Galaxy S25", 15500, True, 2200),
+    ("Samsung", "Samsung Galaxy S24", 14200, True, 2000),
     ("Samsung", "Samsung Galaxy S23", 13800, True, 2000),
     ("Samsung", "Samsung Galaxy S22", 11900, True, 2000),
+    ("Samsung", "Samsung Galaxy A56", 6200, True, 1500),
+    ("Samsung", "Samsung Galaxy A55", 5700, True, 1500),
     ("Samsung", "Samsung Galaxy A54", 5200, True, 1500),
     ("Samsung", "Samsung Galaxy A34", 4300, True, 1500),
     ("Xiaomi", "Xiaomi Redmi Note 13", 3200, True, 1300),
@@ -70,7 +85,7 @@ for brand, name, screen, has_oled, labor in MODELS:
     if has_oled:
         parts["oled"] = offers(screen * 0.6)
     parts["econom"] = offers(screen * 0.36)
-    r["screen"] = {"labor": labor, "duration": "2 часа" if labor >= 2000 else "1 час", "parts": parts}
+    r["screen"] = {"labor": labor, "duration": "2 часа" if labor >= 2200 else "1 час", "parts": parts}
     bat = screen * (0.33 if is_apple else 0.28)
     r["battery"] = {"labor": 900 if is_apple else 1000, "duration": "30 мин" if is_apple else "40 мин",
                     "parts": {"original": offers(bat), "analog": offers(bat * 0.6)}}
