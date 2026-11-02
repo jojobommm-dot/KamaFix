@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Контакты — KamaFix</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Адрес, телефон и запись на ремонт в KamaFix.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="KamaFix, на главную"><span class="logo__mark">K</span>KamaFix</a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="calculator.html">Калькулятор</a>
+      <a href="contacts.html" aria-current="page">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+79000000000">+7 (900) 000-00-00</a>
+      <a class="btn btn--primary btn--sm" href="contacts.html#order">Записаться</a>
+    </div>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<main data-page="contacts">
+  <section class="section" style="padding-block:64px 48px">
+    <div class="container">
+      <div class="heading">
+        <span class="eyebrow">Контакты</span>
+        <h1>Как нас найти</h1>
+        <p class="lead">Приходите без записи или оставьте заявку — мастер перезвонит и подскажет точную цену.</p>
+      </div>
+      <div class="contacts-grid">
+        <div class="map" role="img" aria-label="Схема проезда: KamaFix, ул. Примерная, 1">
+          <div class="map__pin"><svg width="40" height="48" viewBox="0 0 24 29" aria-hidden="true"><path d="M12 0C5.4 0 0 5.2 0 11.6 0 20.3 12 29 12 29s12-8.7 12-17.4C24 5.2 18.6 0 12 0z" fill="#FF6B2C"/><circle cx="12" cy="11.5" r="4.5" fill="#fff"/></svg><span>KamaFix</span></div>
+          <a class="btn btn--secondary btn--sm map__link" href="https://yandex.ru/maps/?text=%D1%83%D0%BB.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%2C%201" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+        </div>
+        <div class="info">
+          <dl>
+            <div><dt>Адрес</dt><dd>г. Город, ул. Примерная, 1<small>5 минут от метро «Центральная»</small></dd></div>
+            <div><dt>Телефон</dt><dd><span class="num">+7 (900) 000-00-00</span><small>Звонки и WhatsApp</small></dd></div>
+            <div><dt>Email</dt><dd>info@kamafix.ru</dd></div>
+            <div><dt>Часы работы</dt><dd>Пн–Пт: 10:00–20:00<br>Сб–Вс: 11:00–18:00</dd></div>
+          </dl>
+          <div class="info__buttons">
+            <a class="btn btn--secondary" href="https://t.me/kamafix" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn btn--secondary" href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="order" style="padding-block:48px 96px">
+    <div class="container">
+      <div class="form-card">
+        <div class="form-card__intro">
+          <h2>Записаться на ремонт</h2>
+          <p>Оставьте контакты и опишите проблему. Перезвоним в течение 10 минут в рабочее время.</p>
+          <ul class="checks"><li>✓ Бесплатная диагностика</li><li>✓ Цена фиксируется при записи</li><li>✓ Гарантия 90 дней</li></ul>
+        </div>
+        <div>
+          <form class="form" id="order-form" novalidate>
+            <div class="form__row">
+              <div class="field"><label for="f-name">Имя</label><input class="input" id="f-name" name="name" autocomplete="name" placeholder="Как к вам обращаться" required></div>
+              <div class="field"><label for="f-phone">Телефон</label><input class="input" id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required></div>
+            </div>
+            <div class="field"><label for="f-model">Модель устройства</label><input class="input" id="f-model" name="model" placeholder="Например, iPhone 13"></div>
+            <div class="field"><label for="f-problem">Что случилось?</label><textarea class="input" id="f-problem" name="problem" placeholder="Опишите неисправность"></textarea></div>
+            <p class="error" id="form-error" role="alert" hidden></p>
+            <div class="form__submit">
+              <button class="btn btn--primary" type="submit">Отправить заявку</button>
+              <small>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</small>
+            </div>
+          </form>
+          <div class="success" id="form-success" role="status" hidden>
+            <h3>Заявка принята</h3>
+            <p>Мастер перезвонит в течение 10 минут в рабочее время.</p>
+            <p class="update-note" style="margin:0">Демо-версия: отправка заявок подключится вместе с сервером.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__about">
+      <a class="logo" href="index.html">KamaFix</a>
+      <p>Ремонт смартфонов и планшетов. Честная цена: средняя стоимость запчасти + работа мастера.</p>
+    </div>
+    <div>
+      <h4>Сервис</h4>
+      <ul><li><a href="services.html">Услуги и цены</a></li><li><a href="calculator.html">Калькулятор</a></li><li><a href="index.html#perks">Гарантия</a></li></ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul><li><a href="tel:+79000000000">+7 (900) 000-00-00</a></li><li><a href="mailto:info@kamafix.ru">info@kamafix.ru</a></li><li>ул. Примерная, 1</li></ul>
+    </div>
+    <div>
+      <h4>Часы работы</h4>
+      <ul><li>Пн–Пт: 10:00–20:00</li><li>Сб–Вс: 11:00–18:00</li></ul>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/pricing.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
